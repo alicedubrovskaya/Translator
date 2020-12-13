@@ -56,4 +56,9 @@ public class WordServiceImpl implements WordService {
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public String toUpperCaseFirstSymbol(String word) {
+        return word.substring(0, 1).toUpperCase() + word.substring(1);
+    }
 }

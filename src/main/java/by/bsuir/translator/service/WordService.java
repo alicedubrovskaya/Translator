@@ -9,4 +9,6 @@ public interface WordService {
     void uploadWords(MultipartFile file);
 
     List<TranslatedWord> getSortedWords(List<List<TranslatedWord>> sentences);
+
+    String toUpperCaseFirstSymbol(String word);
 }
