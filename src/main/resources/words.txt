@@ -1,3 +1,11 @@
-cat кот
-dog собака
-animal животное
+cat
+кот
+
+cold
+холодный
+
+winter
+зима
+
+snow
+снег

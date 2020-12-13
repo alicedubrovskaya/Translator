@@ -1,6 +1,6 @@
 package by.bsuir.translator.dto;
 
-import by.bsuir.translator.model.Word;
+import by.bsuir.translator.model.TranslatedWord;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,6 +15,6 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TranslationResponse {
     private String translatedText;
-    private List<Word> wordsDB;
-    private List<Word> wordsCloud;
+    private List<TranslatedWord> wordsDB;
+    private List<TranslatedWord> wordsCloud;
 }
