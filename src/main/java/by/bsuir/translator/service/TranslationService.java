@@ -1,8 +1,8 @@
 package by.bsuir.translator.service;
 
-import by.bsuir.translator.dto.TranslationResponse;
+import by.bsuir.translator.dto.TranslationResult;
 
 public interface TranslationService {
-    TranslationResponse translate(String text);
+    TranslationResult translate(String text);
 
 }

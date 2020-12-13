@@ -1,6 +1,6 @@
 package by.bsuir.translator.service.impl;
 
-import by.bsuir.translator.dto.TranslationResponse;
+import by.bsuir.translator.dto.TranslationResult;
 import by.bsuir.translator.model.TranslatedWord;
 import by.bsuir.translator.model.TranslationType;
 import by.bsuir.translator.model.Word;
@@ -9,6 +9,7 @@ import by.bsuir.translator.service.TextService;
 import by.bsuir.translator.service.TranslationService;
 import by.bsuir.translator.service.WordService;
 import com.google.cloud.translate.Translate;
+import com.google.cloud.translate.Translation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class TranslationServiceImpl implements TranslationService {
     private final WordRepository wordRepository;
 
     @Override
-    public TranslationResponse translate(String text) {
+    public TranslationResult translate(String text) {
         List<String[]> sentences = textService.splitBySentencesAndWords(text);
 
         List<List<TranslatedWord>> translatedSentences = sentences.stream().map(sentence ->
@@ -40,12 +41,12 @@ public class TranslationServiceImpl implements TranslationService {
                                 .build();
                     } else {
                         try {
-//                            Translation translation = translate.translate(word);
-//                            return TranslatedWord.builder()
-//                                    .word(translation.getTranslatedText())
-//                                    .englishWord(word)
-//                                    .translationType(TranslationType.CLOUD)
-//                                    .build();
+                            Translation translation = translate.translate(word);
+                            return TranslatedWord.builder()
+                                    .word(translation.getTranslatedText())
+                                    .englishWord(word)
+                                    .translationType(TranslationType.GOOGLE)
+                                    .build();
                         } catch (Exception ex) {
                             ex.getCause();
                         }
@@ -62,7 +63,7 @@ public class TranslationServiceImpl implements TranslationService {
                 .filter(word -> word.getTranslationType().equals(TranslationType.GOOGLE))
                 .collect(Collectors.toList());
 
-        return TranslationResponse.builder()
+        return TranslationResult.builder()
                 .translatedText(textService.toText(translatedSentences))
                 .wordsDB(translatedByDataBase)
                 .wordsCloud(translatedByCloud)

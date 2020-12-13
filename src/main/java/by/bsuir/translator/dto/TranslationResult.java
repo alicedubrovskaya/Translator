@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class TranslationResponse {
+public class TranslationResult {
     private String translatedText;
     private List<TranslatedWord> wordsDB;
     private List<TranslatedWord> wordsCloud;

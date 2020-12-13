@@ -13,7 +13,7 @@ public class TextServiceImpl implements TextService {
 
     @Override
     public String[] splitBySentences(String text) {
-        return text.split("[.!?]");
+        return text.split("[.!?]\\s");
     }
 
     public String[] splitByWords(String text) {
@@ -25,7 +25,8 @@ public class TextServiceImpl implements TextService {
     public String clean(String text) {
         return text
                 .replaceAll("[–,.;:!?]", "")
-                .replaceAll("\n", " ")
+                .replaceAll("\r\n", " ")
+                .replaceAll("\n", "")
                 .replaceAll("\t", " ")
                 .replaceAll("  ( )*", " ").toLowerCase();
     }
