@@ -1,5 +1,6 @@
 package by.bsuir.translator.service.impl;
 
+import by.bsuir.translator.model.TranslatedWord;
 import by.bsuir.translator.service.TextService;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +35,12 @@ public class TextServiceImpl implements TextService {
         String[] sentences = splitBySentences(text);
         return Arrays.stream(sentences).map(sentence -> splitByWords(clean(sentence))).
                 collect(Collectors.toList());
+    }
+
+    @Override
+    public String toText(List<List<TranslatedWord>> text) {
+        return text.stream().map(sentence -> {
+            return sentence.stream().map(TranslatedWord::getWord).collect(Collectors.joining(" "));
+        }).collect(Collectors.joining(". "));
     }
 }

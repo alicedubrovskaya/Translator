@@ -1,5 +1,7 @@
 package by.bsuir.translator.service;
 
+import by.bsuir.translator.model.TranslatedWord;
+
 import java.util.List;
 
 public interface TextService {
@@ -8,5 +10,7 @@ public interface TextService {
     String clean(String text);
 
     List<String[]> splitBySentencesAndWords(String text);
+
+    String toText(List<List<TranslatedWord>> text);
 
 }

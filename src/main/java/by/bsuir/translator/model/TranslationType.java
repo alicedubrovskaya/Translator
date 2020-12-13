@@ -1,5 +1,6 @@
 package by.bsuir.translator.model;
 
 public enum TranslationType {
-    DATABASE
+    DATABASE,
+    CLOUD
 }
