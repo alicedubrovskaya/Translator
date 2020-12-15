@@ -1,6 +1,6 @@
 package by.bsuir.translator.controller;
 
-import by.bsuir.translator.dto.TranslationResult;
+import by.bsuir.translator.model.TranslationResult;
 import by.bsuir.translator.service.TranslationService;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;

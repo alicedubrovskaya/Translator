@@ -46,7 +46,7 @@ public class WordServiceImpl implements WordService {
         words.forEach(word -> {
             if(wordsFrequency.containsKey(word)){
                 Integer occurrence = wordsFrequency.get(word);
-                wordsFrequency.put(word, occurrence);
+                wordsFrequency.put(word, occurrence+1);
             }else {
                 wordsFrequency.put(word, 1);
             }

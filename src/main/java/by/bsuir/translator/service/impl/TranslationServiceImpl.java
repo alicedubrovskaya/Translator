@@ -1,6 +1,6 @@
 package by.bsuir.translator.service.impl;
 
-import by.bsuir.translator.dto.TranslationResult;
+import by.bsuir.translator.model.TranslationResult;
 import by.bsuir.translator.model.TranslatedWord;
 import by.bsuir.translator.model.TranslationType;
 import by.bsuir.translator.model.Word;
@@ -13,9 +13,7 @@ import com.google.cloud.translate.Translation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service

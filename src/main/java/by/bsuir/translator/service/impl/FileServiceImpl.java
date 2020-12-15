@@ -1,12 +1,14 @@
 package by.bsuir.translator.service.impl;
 
 import by.bsuir.translator.service.FileService;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+@Service
 public class FileServiceImpl implements FileService {
 
     @Override

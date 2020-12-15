@@ -1,1 +1,9 @@
-Winter cold. Cold!
+Computer science is the study of algorithmic processes and computational machines.
+As a discipline, computer science spans a range of topics from theoretical studies of algorithms,
+computation and information to the practical issues of implementing computing systems in hardware
+and software. Computer science addresses any computational problems, especially information
+processes, such as control, communication, perception, learning, and intelligence.
+Its fields can be divided into theoretical and practical disciplines. For example, the theory of
+computation concerns abstract models of computation and general classes of problems that can be
+solved using them, while computer graphics and computational geometry emphasize more specific
+applications.

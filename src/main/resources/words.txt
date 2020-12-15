@@ -1,11 +1,23 @@
-cat
-кот
+study
+изучение
 
-cold
-холодный
+discipline
+дисциплина
 
-winter
-зима
+control
+контроль
 
-snow
-снег
+learning
+обучение
+
+intelligence
+интеллект
+
+heart
+сердце
+
+research
+исследования
+
+aims
+стремится
